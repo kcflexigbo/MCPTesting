@@ -1,0 +1,13 @@
+[project]
+name = "mcp-testing"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.13"
+dependencies = [
+    "langchain-core>=0.3.65",
+    "langchain-google-genai>=2.1.5",
+    "langchain-mcp-adapters>=0.1.7",
+    "langchain-openai>=0.3.22",
+    "langgraph>=0.4.8",
+    "mcp>=1.9.3",
+]
