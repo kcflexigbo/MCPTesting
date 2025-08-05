@@ -52,6 +52,8 @@ async def get_mcp_tools():
         }
     )
     tools = await client.get_tools()
+    resources = await client.get_resources("math")
+    print([x for x in resources])
     yield tools
 
 
@@ -193,7 +195,7 @@ class Agent:
         """
         system_message_text = (
             "You are a helpful assistant. You MUST use the provided tools to answer questions when they are relevant. "
-            "Use the `GetUsername` tool to find the user's name. "
+            "Refer to the 'AVAILABLE RESOURCES' section for pre-loaded information like the username. "
             "Use `add_numbers` or `subtract_numbers` for any calculations. "
             "For all other questions, answer from your general knowledge."
         )
